@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Image Save and Share
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <img src="assets/imgs/FreakyJolly.jpg" />
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="rightBtn">
+          <button ion-button small round icon-left outline  mode="ios" color="shareBtn" (click)="shareImg(img)">
+              <ion-icon name="share"></ion-icon>
+              <b>Share</b>
+          </button>
+      </ion-col>
+      <ion-col class="leftBtn">
+          <button ion-button small round icon-left outline mode="ios" color="saveBtn" (click)="savefile(img)">
+              <ion-icon name="download"></ion-icon>
+              <b>Save</b>
+          </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+  
+</ion-content>
