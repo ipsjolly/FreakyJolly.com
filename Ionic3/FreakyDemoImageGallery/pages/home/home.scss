@@ -1,0 +1,73 @@
+page-home {
+
+    .img-bg {
+        position: relative;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.2;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+
+    .floatBtnWrap {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        z-index: 999;
+        /* margin: auto; */
+    }
+
+    .centerBtn{
+        text-align: center;
+    }
+    .leftBtn{
+        text-align: left;
+    }
+    .rightBtn{
+        text-align: right;
+    }
+
+
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color:#FFE300;
+}
+.toolbar-title-md {
+    color: #FFE300;
+}
+.toolbar-background {
+    background: #1B1E22!important;
+}
+
+.menu-inner .scroll-content{
+background-color: #272B30;
+}
+
+.menu-inner .scroll-content button.item.item-block{
+    background-color: #272B30;
+    color:#F0F0F0;
+}
+
+.menu-inner .scroll-content button.item.item-block .input-wrapper{
+    padding: 20px 10px 20px 10px;
+    font-size: 20px;
+}
+.menu-inner .scroll-content button.item.item-block .input-wrapper ion-label span.menu-txt{
+    padding: 0px 0px 0px 42px;
+}
+.menu-inner .scroll-content button.item.item-block .input-wrapper ion-icon.icon{
+    line-height: 23px;
+    position: absolute;
+}

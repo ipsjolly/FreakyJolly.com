@@ -1,0 +1,19 @@
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>Shiva Wallpapers</ion-title>
+        </ion-navbar>
+      </ion-header>
+     
+    <ion-content>
+
+            <div class="images">
+                    <div class="one-image {{image.inum}}"  *ngFor="let image of jsonData.imagesAll" >
+                      <img src="assets/img/{{image.inum}}.jpg" (click)="navigateToHome(image)" />
+                    </div>
+            </div>
+ 
+
+    </ion-content>

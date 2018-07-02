@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Wallpapers</ion-title>
+    </ion-navbar>
+  </ion-header>
+ 
+<ion-content>
+
+
+
+<!-- <button ion-button (click)="openfile();">Share on WhatsApp</button> -->
+
+  <ion-slides class="image-slider" loop="false" slidesPerView="1" (ionSlideDidChange)="slideChanged()" initialSlide="{{initItem}}"  options="mySlideOptions">
+    <ion-slide *ngFor="let img of jsonData.imagesAll">
+      <div class="img-bg"  [ngStyle]="{'background-image': 'url(assets/img/' + img.inum + '.jpg)'}" ></div>
+      <img src="assets/img/{{img.inum}}.jpg"  class="thumb-img" imageViewer />
+    </ion-slide>      
+    
+
+  </ion-slides>    
+  
+  <div class="floatBtnWrap">
+    <ion-grid>
+        <ion-row>
+          <ion-col class="rightBtn">
+              <button ion-button small round icon-left outline  mode="ios" color="shareBtn" (click)="shareImg(img)">
+                  <ion-icon name="share"></ion-icon>
+                  <b>Share</b>
+              </button>
+          </ion-col>
+          <ion-col class="leftBtn">
+              <button ion-button small round icon-left outline mode="ios" color="saveBtn" (click)="openfile(img)">
+                  <ion-icon name="download"></ion-icon>
+                  <b>Save</b>
+              </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
