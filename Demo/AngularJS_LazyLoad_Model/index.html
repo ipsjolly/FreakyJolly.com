@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>FreakyJolly AngularJS Lazy Load Example</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+        <script src="assets/js/lib/angular/angular.min.js"></script>
+        <script src="assets/js/lib/angular/angular-route.min.js"></script>
+        <script src="assets/js/lib/angular/ocLazyLoad.min.js"></script>
+   
+        <script src="app/app.module.js"></script>
+        <script src="app/app.config.js"></script>
+        <script src="app/app.routes.js"></script>
+         
+       
+        
+    </head>
+    <body ng-app="app">
+		<div class="container" style="width: 60%;margin-top: 30px;"> 
+			<h3 class="display-4">Lazy Load AngularJS Example - FreakyJolly.com</h3>
+            <div ng-view></div>
+
+
+            <style>
+
+                .page-content {
+                    background-color: #757575;
+                    color: #DDDDDD;
+                    padding: 80px;
+                    text-align: center;
+                }
+
+            </style>
+
+
+		</div>
+    </body>
+</html>
