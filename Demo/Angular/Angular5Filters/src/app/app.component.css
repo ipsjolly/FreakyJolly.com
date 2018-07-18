@@ -1,0 +1,77 @@
+/* Styles go here */
+
+body{
+    font-family: verdana;
+  }
+  
+  .filter-input{
+    font-size:25px;
+    padding:5px;
+    border-radius:3px;
+    border:2px solid #ccc;
+    margin-bottom:5px;
+    padding-right: 30px;
+  }
+  
+  .clear-selection {
+      font-size: 12px;
+      font-weight: bold;
+      color: red;
+      cursor: pointer;
+      position: absolute;
+  }
+  
+  .game-list {
+      margin-top: 35px;
+  }
+  
+  li.game-item {
+      list-style: none;
+      font-size: 20px;
+      padding: 3px 0px;
+  }
+  li.game-item input{
+    height: 20px;
+      width: 20px;
+  }
+  
+  .game-text{
+    vertical-align:top;
+  }
+  
+  .selected-game {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 24px;
+      background: #B9CFEA;
+      margin-bottom: 10px;
+      padding: 2px 11px 4px 11px;
+      border-radius: 8px;
+  }
+  
+  .delete-game{
+      font-size: 13px;
+      padding: 3px 6px;
+      vertical-align:middle;
+      cursor:pointer;
+  }
+  .delete-game:hover{
+      background: #99ABC1;
+      padding: 3px 6px;
+      border-radius: 15px;
+  }
+  
+  .filter-wrap{
+    position:relative ;
+   
+  }
+  
+  .filter-clear{
+      position: absolute;
+      margin-left: -24px;
+      margin-top: 11px;
+      cursor:pointer;
+  }
+  
+  
+  

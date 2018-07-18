@@ -1,0 +1,33 @@
+<div>
+  <!-- Heading Title -->
+  <h4 class="app-heading">Select Available Games Below:</h4>
+  
+  <!-- Search Field -->
+  <div>
+    <div class="filter-wrap">
+      <input [(ngModel)]="searchText" placeholder="Filter Games" class="filter-input">
+      <span class="filter-clear" *ngIf="searchText.length>0" (click)="clearFilter()">X</span>
+    </div>
+  </div>
+  <!-- Clear Link -->
+  <div class="clear-selection" title="Click to Clear Selections" (click)="clearSelection()" *ngIf="selected_count">Clear Selection</div>
+  
+  <!-- Game List -->
+  <ul class="game-list">
+    <li *ngFor="let g of games | filter : searchText" class="game-item"> 
+      <input (change)="getSelected()" type="checkbox"
+               name="games"
+               value="{{g.id}}"
+               [(ngModel)]="g.selected"/> 
+      <span class="game-text">{{g.name}}</span>
+    </li>
+  </ul>
+  
+  <!-- Selected Games-->
+  <div class="selected-games-wrap">
+      <div class="selected-game" *ngFor="let s of selected_games" >
+        <span>{{s.name}} <span class="delete-game" (click)="deleteGame(s.id)" title="Click to delete">X</span></span>
+      </div>
+  </div>
+  
+</div>
