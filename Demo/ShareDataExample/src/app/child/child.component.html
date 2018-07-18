@@ -1,0 +1,13 @@
+<div *ngIf="childlist">
+  
+<div class="row mt-5">
+      <div class="card text-center col-md-6" *ngFor="let it of childlist" >
+          <div class="card-body">
+            <img class="card-img-top" src="assets/img/{{it.gender}}.jpg" alt="Card image" style="width:110px">
+            <h4 class="card-title">{{it.name}}</h4>
+            <h5><p class="card-text">Gender: {{it.gender}}</p></h5>
+            <h5><p class="card-text">Age: {{it.age}} Yrs</p></h5>
+          </div>
+        </div>
+  </div>
+</div>

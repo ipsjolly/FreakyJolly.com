@@ -1,0 +1,15 @@
+
+<h3 class="display-4 text-center mt-5">Change Parents Below to View their Children Names</h3>
+
+
+
+  <div ngbDropdown class="special-dropdown mt-5">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle><img class="card-img-top" src="assets/img/Male.png" alt="Card image" style="width:50px"> Mr.{{selectedParent.father_name}} & <img class="card-img-top" src="assets/img/Female.png" alt="Card image" style="width:50px"> Mrs.{{selectedParent.mother_name}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item"*ngFor="let parent of parentList" (click)="onSelectList(parent)">Mr.{{parent.father_name}} & Mrs.{{parent.mother_name}}</button>
+      </div>
+  </div>
+
+
+
+<app-child [childlist] = "selectedChildren"></app-child>
