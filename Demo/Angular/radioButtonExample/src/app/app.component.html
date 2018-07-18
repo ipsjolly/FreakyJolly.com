@@ -1,0 +1,17 @@
+
+<div class="text-center mt-5">
+<h4>Selected value is {{radioSel.name}}</h4>
+
+<div>
+  <ul class="list-group">
+        <li class="list-group-item"  *ngFor="let item of itemsList">
+          <input type="radio" [(ngModel)]="radioSelected" name="list_name" value="{{item.value}}" (change)="onItemChange(item)"/> 
+          {{item.name}}
+          
+        </li>
+  </ul>
+</div>
+
+<h5>{{radioSelectedString}}</h5>
+
+</div>

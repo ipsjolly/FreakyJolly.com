@@ -1,0 +1,8 @@
+input[type=radio]{
+    height: 27px;
+    width: 27px;
+}
+
+.list-group-item{
+    font-size: 25px;
+}
