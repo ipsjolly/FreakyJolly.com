@@ -1,0 +1,8 @@
+  <!-- Selected Games  -->
+  <div class="selected-games-wrap">
+    <div class="selected-game" *ngFor="let s of selectedGames" >
+      <span>{{s.name}} <span class="delete-game" (click)="dataService.deleteGame(s.id)" title="Click to delete">X</span></span>
+    </div>
+  </div>
+
+  

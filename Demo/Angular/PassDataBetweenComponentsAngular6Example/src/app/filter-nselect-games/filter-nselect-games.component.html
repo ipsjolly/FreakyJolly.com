@@ -1,0 +1,36 @@
+
+<div>
+  <!-- Heading Title -->
+  <h4 class="app-heading">Select Available Games Below:</h4>
+  
+  <!-- Search Field -->
+  <div>
+    <div class="filter-wrap">
+      <input [(ngModel)]="dataService.searchText" placeholder="Filter Games" class="filter-input" (keyup)="dataService.setSearchTerm(dataService.searchText)">
+      <span class="filter-clear" *ngIf="dataService.getSearchTerm().length>0" (click)="dataService.clearFilter()">X</span>
+    </div>
+  </div>
+  <!-- Clear Link -->
+  <div class="clear-selection" title="Click to Clear Selections" (click)="dataService.clearSelection()" *ngIf="dataService.selected_count">Clear Selection</div>
+  
+  <!-- Game List -->
+  <ul class="game-list">
+    <li *ngFor="let g of dataService.getGames() | filter : dataService.getSearchTerm()" class="game-item"> 
+      <input (change)="dataService.getSelectedGames()" type="checkbox"
+               name="games"
+               value="{{g.id}}"
+               [(ngModel)]="g.selected"/> 
+      <span class="game-text">{{g.name}}</span>
+    </li>
+  </ul>
+  
+
+
+<app-show-selected-games [selectedGames]="dataService.selected_games" ></app-show-selected-games>
+
+<nav *ngIf="dataService.selected_games.length">
+  <a routerLink="/savedGames">Show Saved Games on Other Route/View</a>
+</nav>
+
+  
+</div>

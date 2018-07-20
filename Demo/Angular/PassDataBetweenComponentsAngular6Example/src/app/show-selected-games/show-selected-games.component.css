@@ -1,0 +1,22 @@
+.selected-game {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 24px;
+    background: #B9CFEA;
+    margin-bottom: 10px;
+    padding: 2px 11px 4px 11px;
+    border-radius: 8px;
+}
+
+ 
+.delete-game{
+    font-size: 13px;
+    padding: 3px 6px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+.delete-game:hover{
+    background: #99ABC1;
+    padding: 3px 6px;
+    border-radius: 15px;
+}
