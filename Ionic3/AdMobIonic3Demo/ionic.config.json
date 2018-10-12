@@ -1,0 +1,7 @@
+{
+  "name": "AdMobIonic3Demo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
