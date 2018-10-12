@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h5>
+    {{ title }}!
+  </h5>
+  <a [routerLink]="['/view-one']" routerLinkActive="router-link-active" >View One</a>&nbsp;|&nbsp;
+  <a [routerLink]="['/view-two']" routerLinkActive="router-link-active" >View Two</a>&nbsp;|&nbsp;
+  <a [routerLink]="['/view-three']" routerLinkActive="router-link-active" >View Three</a>
+</div>
+
+
+<router-outlet></router-outlet>
