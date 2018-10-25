@@ -1,0 +1,6 @@
+<ion-content padding>
+
+  <div class="on-button" *ngIf="!isOn" (click)="onTorch()"></div>
+  <div class="off-button" *ngIf="isOn" (click)="offTorch()"></div>
+
+</ion-content>

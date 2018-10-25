@@ -1,0 +1,27 @@
+page-home {
+    
+    ion-content{
+         background-image: url("../../assets/imgs/hd-background.jpg");
+         background-size: cover;
+    }    
+    .on-button{
+        background-image: url(../../assets/imgs/on.png);
+        background-size: contain;
+        background-position: 50% 2%;
+        height: 41%;
+        /* width: 50%; */
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 30%;
+    }
+    .off-button{
+        background-image: url(../../assets/imgs/off.png);
+        background-size: contain;
+        background-position: 50% 2%;
+        height: 41%;
+        /* width: 50%; */
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 30%;
+    }
+}
