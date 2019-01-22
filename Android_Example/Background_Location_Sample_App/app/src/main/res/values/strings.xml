@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Demo Background Location Address</string>
+
+
+
+    <string name="request_updates">Start Tracking</string>
+    <string name="remove_updates">Stop Tracking</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+
+    <string name="settings">Settings</string>
+</resources>
