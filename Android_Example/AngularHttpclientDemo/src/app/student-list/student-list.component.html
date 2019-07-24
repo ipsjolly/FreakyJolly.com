@@ -1,0 +1,28 @@
+<div class="container">
+  <h3>List All Students</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of studentsData">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.address}}</td>
+        <td style="display: flex">
+            <button type="button" class="btn btn-warning btn-sm" routerLink="/edit/{{item.id}}">Edit</button>
+            <button type="button" class="btn btn-danger btn-sm ml-1" (click)="delete(item)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-success" routerLink="/create">Add Student</button>
+</div>
