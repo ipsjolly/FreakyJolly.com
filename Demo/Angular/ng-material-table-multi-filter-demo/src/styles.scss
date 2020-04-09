@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+  
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    background: rgba(237,255,184,1);
+    background: -moz-linear-gradient(left, rgba(237,255,184,1) 0%, rgba(97,201,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,255,184,1)), color-stop(100%, rgba(97,201,0,1)));
+    background: -webkit-linear-gradient(left, rgba(237,255,184,1) 0%, rgba(97,201,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(237,255,184,1) 0%, rgba(97,201,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(237,255,184,1) 0%, rgba(97,201,0,1) 100%);
+    background: linear-gradient(to right, rgba(237,255,184,1) 0%, rgba(97,201,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edffb8', endColorstr='#61c900', GradientType=1 );
+    width: 0%;
+    transition-timing-function: ease-out;
+    transition: width .5s;
+    height: 100vh;
+  }
+  
+//   .content {
+//     padding: 100px 0;
+//     margin: 50px auto 0 auto;
+//     width: 80%;
+//   }
+
+app-material-table{
+  width: 100%;
+}
