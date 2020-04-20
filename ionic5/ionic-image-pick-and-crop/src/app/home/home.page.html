@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      Ionic Image Pick & Crop
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+
+  <h5>Select Your Awsome Pic!</h5>
+
+  <ion-button (click)="pickImage()">
+    Pick Image
+  </ion-button>
+
+  <h5 *ngIf="croppedImagepath.length">Cropped Image</h5>
+
+  <p *ngIf="isLoading">Loading ...</p>
+
+  <img [src]="croppedImagepath" />
+
+
+</ion-content>

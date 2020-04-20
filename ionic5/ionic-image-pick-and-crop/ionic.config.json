@@ -1,0 +1,7 @@
+{
+  "name": "ionic-image-pick-and-crop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
