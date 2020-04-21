@@ -1,0 +1,13 @@
+.table-wrapper{
+    width: 1024px;
+    /* margin-top: 50px; */
+    margin: 50px auto;
+}
+
+table{ 
+    width:100%
+ }
+
+tr.editable-row{
+    background-color: #ffe6aa;
+} 

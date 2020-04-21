@@ -1,0 +1,66 @@
+<div class="table-wrapper">
+
+    <h1>Angular Material Datatable Inline CRUD Operations</h1>
+    <p>Check complete tutorial @ <a
+            href="https://www.freakyjolly.com/angular-httpclient-crud-operations-using-restfull-apis/"
+            target="_blank">FreakyJolly.com</a></p>
+    <h2>{{isEditMode ? 'Edit student' : 'Add new student'}}</h2>
+
+    <form (submit)="onSubmit()" #studentForm="ngForm">
+        <mat-form-field>
+            <input matInput placeholder="Name" name="name" required [(ngModel)]="studentData.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Age" name="age" required [(ngModel)]="studentData.age">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Address" name="address" required [(ngModel)]="studentData.address">
+        </mat-form-field>
+
+
+        <ng-container *ngIf="isEditMode; else elseTemplate">
+            <button mat-button color="primary">Update</button>
+            <a mat-button color="warn" (click)="cancelEdit()">Cancel</a>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <button mat-button color="primary">Add</button>
+        </ng-template>
+    </form>
+
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> #Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="age">
+            <th mat-header-cell *matHeaderCellDef> Age </th>
+            <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef> Address </th>
+            <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+                <a href="javascript:void(0)" (click)="editItem(element)">Edit</a> |
+                <a href="javascript:void(0)" (click)="deleteItem(element.id)">Delete</a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+            [ngClass]="{'editable-row': studentData.id === row.id}"></tr>
+    </table>
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+</div>
