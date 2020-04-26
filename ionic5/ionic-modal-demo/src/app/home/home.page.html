@@ -1,0 +1,17 @@
+<!-- home.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Ionic App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-button (click)="openModal()">Open Modal</ion-button>
+
+  <p *ngIf="dataReturned">{{dataReturned}}</p>
+
+
+</ion-content>
