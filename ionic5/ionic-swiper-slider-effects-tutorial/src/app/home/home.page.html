@@ -1,0 +1,41 @@
+<!-- home.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      Ion-Sliders Flip Effect
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h5>Ionic Ion Slider</h5>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <span class="slider-nav arrow-prev" (click)="slidePrev(sliderOne,slideWithNav)">
+          <div class="prev-icon-custom custon-nav" [class.disabled]="sliderOne.isBeginningSlide"></div>
+        </span>
+      </ion-col>
+      <ion-col size="10">
+
+        <ion-slides pager="false" [options]="slideOptions" #slideWithNav
+          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+          <ion-slide *ngFor="let s of sliderOne.slidesItems">
+            <img src="https://i.picsum.photos/id/{{s.id}}/400/400.jpg">
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+      <ion-col size="1">
+        <span class="slider-nav arrow-next" (click)="slideNext(sliderOne,slideWithNav)">
+          <div class="next-icon-custom custon-nav" [class.disabled]="sliderOne.isEndSlide"></div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
