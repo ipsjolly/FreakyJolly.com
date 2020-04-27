@@ -1,0 +1,89 @@
+<!-- home.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      Multiple Ion-Sliders with Custom Navigation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+
+
+  <h5>Auto Play Slider</h5>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+          <ion-slide *ngFor="let s of sliderOne.slidesItems">
+            <img src="https://i.picsum.photos/id/{{s.id}}/300/200.jpg">
+            <span class="slide-text">Slide id {{s.id}}</span>
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <h5>Slider with Space Between</h5>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <span class="slider-nav arrow-prev" (click)="slidePrev(sliderTwo,slideWithNav2)">
+          <div class="prev-icon-custom custon-nav" [class.disabled]="sliderTwo.isBeginningSlide"></div>
+        </span>
+      </ion-col>
+      <ion-col size="10">
+
+        <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2
+          (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+          <ion-slide *ngFor="let s of sliderTwo.slidesItems">
+            <img src="https://i.picsum.photos/id/{{s.id}}/300/200.jpg">
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+      <ion-col size="1">
+        <span class="slider-nav arrow-next" (click)="slideNext(sliderTwo,slideWithNav2)">
+          <div class="next-icon-custom custon-nav" [class.disabled]="sliderTwo.isEndSlide"></div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h5>Slider at bottom</h5>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <span class="slider-nav arrow-prev" (click)="slidePrev(sliderThree,slideWithNav3)">
+          <div class="prev-icon-custom custon-nav" [class.disabled]="sliderThree.isBeginningSlide"></div>
+        </span>
+      </ion-col>
+      <ion-col size="10">
+
+        <ion-slides pager="false" [options]="slideOptsThree" #slideWithNav3
+          (ionSlideDidChange)="SlideDidChange(sliderThree,slideWithNav3)">
+          <ion-slide *ngFor="let s of sliderThree.slidesItems">
+            <img src="https://i.picsum.photos/id/{{s.id}}/300/200.jpg">
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+      <ion-col size="1">
+        <span class="slider-nav arrow-next" (click)="slideNext(sliderThree,slideWithNav3)">
+          <div class="next-icon-custom custon-nav" [class.disabled]="sliderThree.isEndSlide"></div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
