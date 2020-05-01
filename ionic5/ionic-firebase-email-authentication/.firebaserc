@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ionic-5-demo": {
+      "hosting": {
+        "app": [
+          "ionic-5-demo"
+        ]
+      }
+    }
+  }
+}
