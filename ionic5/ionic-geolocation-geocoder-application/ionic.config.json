@@ -1,0 +1,7 @@
+{
+  "name": "ionic-geolocation-geocoder-application",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
