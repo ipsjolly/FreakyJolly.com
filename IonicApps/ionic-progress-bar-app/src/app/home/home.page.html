@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ionic Progress Bar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h4>Default Progress Bar</h4>
+  <ion-progress-bar></ion-progress-bar>
+
+  <h4>Inderminate</h4>
+  <ion-progress-bar [type]="'indeterminate'" *ngIf="showLoader"></ion-progress-bar>
+
+  <ion-button color="primary" size="small" (click)="getPosts()">Fetch Server API</ion-button>
+
+  <h4>Upload Progress <span *ngIf="p_bar_value_p">{{p_bar_value_p*100 | number}}%</span></h4>
+  <ion-progress-bar [value]="p_bar_value_p" *ngIf="showLoader"></ion-progress-bar>
+  <ion-button color="warning" expand="full" size="small" (click)="runDeterminateProgress()">Upload File</ion-button>
+
+  <h4>Video Streaming</h4>
+  <ion-progress-bar class="my-buffer-progress" [value]="p_bar_value_b" [buffer]="p_bar_buffer">
+  </ion-progress-bar>
+  <ion-button color="warning" expand="full" size="small" (click)="streamMedia()">Watch Online</ion-button>
+
+
+</ion-content>
