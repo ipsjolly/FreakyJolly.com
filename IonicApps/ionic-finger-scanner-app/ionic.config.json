@@ -1,0 +1,7 @@
+{
+  "name": "ionic-finger-scanner-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
