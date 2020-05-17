@@ -1,0 +1,7 @@
+{
+  "name": "ionic-in-app-purchase-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

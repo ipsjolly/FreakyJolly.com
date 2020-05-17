@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ionic In App Purchase
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h4>Get Products</h4>
+  <ion-button expand="full" fill="outline" color="success" *ngIf="!products" (click)="loadProducts()">
+    Load Products
+  </ion-button>
+
+  <ion-button *ngFor="let product of products" color="warning" (click)="buy(product.productId)">
+    {{product.title}} - {{product.price}}
+  </ion-button>
+
+
+  <h4>Restore Purchases</h4>
+  <ion-button expand="full" color="danger" fill="outline" (click)="restore()">
+    Restore Purchase
+  </ion-button>
+
+</ion-content>
