@@ -34,81 +34,13 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Ionic 5 Image Upload in Firebase with Progress Percentage Bar Tutorial
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+In this Ionic 5/4 tutorial, we will integrate Firebase services and see how to upload images in Ionic application with a progress bar indicator on the Firebase database.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+As we all know Firebase provides an awesome package of cloud services making the life of developers very easy. There is a wide range of tools available for next-level app development like Authentication, Testing, Analytics, Storage, Database, etc.
 
-### Prerequisites
+In this post, we will create an Ionic Application with Image Upload feature with the Progress bar. It will also list already saved of Images. This application will focus on the two most important services of Firebase
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+Read full tutorial here
+https://www.freakyjolly.com/ionic-4-image-upload-with-progress-in-firestore-and-firestorage-tutorial-by-application/
