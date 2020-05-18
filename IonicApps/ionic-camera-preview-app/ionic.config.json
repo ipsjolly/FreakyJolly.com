@@ -1,0 +1,7 @@
+{
+  "name": "camera-app-demo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
