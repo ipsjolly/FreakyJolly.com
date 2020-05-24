@@ -1,0 +1,7 @@
+{
+  "name": "ionic-radio-button-group-list",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

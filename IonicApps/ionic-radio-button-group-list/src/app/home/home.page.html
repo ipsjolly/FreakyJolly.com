@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Ionic Radio List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-list>
+    <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)" #radioGroup>
+      <ion-list-header>
+        <ion-label>Radio List</ion-label>
+      </ion-list-header>
+
+      <ion-item *ngFor="let item of radio_list" (ionFocus)="radioFocus()" (ionSelect)="radioSelect($event)"
+        (ionBlur)="radioBlur()">
+        <ion-label>{{item.text}}</ion-label>
+        <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"
+          color="{{item.color}}" disabled="{{item.disabled}}"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+
+  <h6>Click on button to chnage selection</h6>
+
+  <ion-button (click)="selectTwo()">Select Second Radio</ion-button>
+
+
+  <p><b>Radio Group Event</b><br />
+    {{selectedRadioGroup | json}}</p>
+  <p><b>Radio Item Event</b><br />
+    {{selectedRadioItem | json}}</p>
+
+
+  <a href="https://www.freakyjolly.com/ionic-4-add-radio-lists-in-radio-group-example-and-tutorial/">Complete
+    tutorial</a>
+
+</ion-content>
