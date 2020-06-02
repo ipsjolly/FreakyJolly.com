@@ -1,0 +1,7 @@
+{
+  "name": "ionic-handle-back-event",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
