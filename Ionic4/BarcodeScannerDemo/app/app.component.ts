@@ -41,7 +41,7 @@ export class AppComponent {
   }
 
   scanCode() {
-    this.barcodeScanner.scan().then(barcodeData => {
+    this.barcodeScanner.scan(this.barcodeScannerOptions).then(barcodeData => {
       alert('Barcode data ' + JSON.stringify(barcodeData));
       this.scannedData = barcodeData;
     }).catch(err => {
